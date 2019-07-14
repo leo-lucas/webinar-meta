@@ -31,16 +31,39 @@ class User {
 
 console.log("class", new User("Leonardo"));
 
-class UserDois implements UserInterface {
-  constructor(public name: string, public idade: number) {
+class UserComplete extends User implements UserInterface {
+  constructor(name: string, public idade: number) {
+    super(name);
     console.log("CL construtor", this.toString());
   }
   toString = () => this.name;
 }
 
-console.log("class", new UserDois("Leonardo", 20));
+console.log("class", new UserComplete("Leonardo", 20));
 
 // Enuns
+enum Tipo {
+  Administrador,
+  Clinte = "cliente"
+}
+
+class UsuarioTipado extends UserComplete {
+  tipo: Tipo | undefined;
+}
+
+const usuario = new UsuarioTipado("usuario 1", 30);
+
+usuario.tipo = Tipo.Administrador;
+console.log("Usuario sem tipo", usuario);
+
+usuario.tipo = Tipo.Clinte;
+console.log("Usuario tipado", usuario);
+
 // Generics
-let valor: Array<String>;
+let array: Array<String> | undefined;
+console.log(array);
+
+array = ["01"];
+console.log(array);
+
 console.log("----------------------------------");
