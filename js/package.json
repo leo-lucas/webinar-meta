@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch \"src/\" --exec \"clear && tsc && node build/main.js\" -e ts",
-    "declare": "tsc --declaration src/**.ts",
-    "build": "tsc"
+    "start": "nodemon --watch \"src/\" --exec \"ts-node src/main.ts\" -e ts",
+    "build": "tsc",
+    "build-start": "nodemon --watch \"src/\" --exec \"clear && tsc && node build/main.js\" -e ts"
   },
   "author": "",
   "license": "ISC",
