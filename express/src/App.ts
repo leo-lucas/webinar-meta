@@ -1,17 +1,17 @@
-import express, { Application } from 'express';
-import morgan from "morgan"
-import cors from "cors"
+import morgan from 'morgan'
+import express, { Application } from 'express'
+import cors from 'cors'
 
 export default class App {
-    private express: Application;
-    constructor(){
-        this.express = express()
-        this.applayMiddlewares()
-    }
+  private express: Application;
 
-    private applayMiddlewares():void{
-           this.express.use(morgan("dev"))
+  public constructor () {
+    this.express = express()
+    this.applyMiddlewares()
+  }
 
-        this.express.use(cors())
-    }
+  private applyMiddlewares (): void {
+    this.express.use(morgan('dev'))
+    this.express.use(cors())
+  }
 }

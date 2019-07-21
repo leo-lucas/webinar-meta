@@ -1,13 +1,13 @@
 console.log("----------------------------------");
 
-// tipagem
-const string: string = "webinar";
-const numero = 1;
-
 // Funções
 function converterParaString(numero: number): string {
+// tipagem
+  const string: string = "webinar";
+  const numeros = [1];
   return numero.toString();
 }
+
 const type = converterParaString(3);
 console.log("Função converter", type, typeof type);
 

@@ -4,13 +4,12 @@ module.exports = {
     es6: true,
     node: true
   },
-  plugins: [
-    "@typescript-eslint",
-    "eslint:recommended",
-    "plugin:jest/recommended",
-    "plugin:prettier/recommended"
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "standard"
   ],
-  extends: ["plugin:@typescript-eslint/recommended", "standard"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -19,14 +18,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-
   rules: {
-    "prettier/prettier": "error",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
     complexity: ["error", 5],
     "max-lines": ["error", 150],
     "no-var": "error",
