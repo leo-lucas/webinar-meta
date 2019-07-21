@@ -1,5 +1,5 @@
 import morgan from 'morgan'
-import express, { Application } from 'express'
+import express, { Application, Router } from 'express'
 import cors from 'cors'
 
 export default class App {
@@ -7,11 +7,22 @@ export default class App {
 
   public constructor () {
     this.express = express()
-    this.applyMiddlewares()
+    this.carregarModulos()
   }
 
-  private applyMiddlewares (): void {
+  private carregarModulos (): void {
     this.express.use(morgan('dev'))
     this.express.use(cors())
+  }
+
+  public adicionarModuloRotas (router: Router):void {
+    this.express.use(router)
+  }
+
+  public start (): void {
+    this.express.listen(5000, ():void => {
+      console.log('Servidor rodando')
+      console.log('http://localhost:5000/')
+    })
   }
 }
