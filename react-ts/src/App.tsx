@@ -1,8 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Lista from "./Components/Lista";
 
 const App: React.FC = () => {
+  function exibirIndex(teste: string) {
+    alert(teste);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +22,10 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        <Lista lista={["Meta", "TS"]} action={exibirIndex} />
       </header>
     </div>
   );
-}
+};
 
 export default App;
