@@ -10,8 +10,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "nodemon": "^1.19.1",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "ts-node": "^8.3.0"
   }
 }

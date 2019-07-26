@@ -1,8 +1,7 @@
 console.log("----------------------------------");
-
 // Funções
 function converterParaString(numero: number): string {
-// tipagem
+  // tipagem
   const string: string = "webinar";
   const numeros = [1];
   return numero.toString();
