@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch \"src/\" --exec \"clear && ts-node src/index.js\" -e ts",
+    "start": "nodemon --watch \"src/\" --exec \"clear && ts-node src/index.ts\" -e ts",
     "build": "nodemon --watch \"src/\" --exec \"clear && tsc && node build/index.js\" -e ts"
   },
   "author": "",
